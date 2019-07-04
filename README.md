@@ -1,1 +1,7 @@
 # Capstone_2
+
+This repository contains all files relevant to my second Capstone project for Springboard's Data Science Career Track. 'Sepsis.ipynb' shows the code for wrangling the dataset, performing exploratory data analysis, and the process of transitioning from timestamp predictions to patient predictions through machine learning. The data contained information from 5000 patients, and was taken from Physionet.com. Due to the size of the dataset, it was not added directly to this repository. This repository also includes the reports made at different stages of this project.
+
+The goal of this project was to predict whether a patient would get Sepsis based on available clinical data, with Vital Signs, Lab Values, and Demographics available as features. I concatenated all patient files into a single dataset, and proceeded with a grouped forward selection process, making models with different subsets of features to examine their impact on predictability. I started only with the Vital Signs, then added the Lab Values and Demographics, then added clinical latent variables through feature engineering, and finally added time-series trends, using supervised learning techniques for each round.
+
+After creating a tuned model for timestamp predictions, which ended up being a Random Forest model, I used this model to make patient predictions by selecting an optimal threshold, determining what percentage of timestamp predictions per patient should be labeled positively, before I conclude that the patient has Sepsis.  
